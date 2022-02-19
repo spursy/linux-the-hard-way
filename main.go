@@ -19,7 +19,7 @@ import (
 // }
 
 func simulateStress() {
-  cmd := exec.Command("/usr/bin/stress-ng", "--iomix 8" )
+  cmd := exec.Command("stress-ng", "--iomix", "8" )
 	if err := cmd.Start(); err != nil {
 		fmt.Printf("---- %v\n", err.Error())
 	}
